@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Start JavaScript</title>
+</head>
+<body>
+  <script>
+
+      //EXERCICIO 1
+
+      var endereco = {
+       rua: "Rua dos pinheiros",
+       numero: 1293,
+       bairro: "centro",
+       cidade: "São Paulo",
+       uf: "SP"
+      };
+
+      function end(endereco){
+        console.log("O usuário mora em "+endereco.cidade+" / "+endereco.uf+
+        ", no bairro "+endereco.bairro+", na rua "+endereco.rua+" com nº "
+        +endereco.numero+".");
+      }
+
+      end(endereco);
+
+      //EXERCICIO 2
+
+      function Pares(x, y) {
+        for(var cont=x; cont<=y; cont++){
+          if (cont % 2 === 0){
+            console.log(cont,'PAR');
+          }else{
+            console.log(cont,'IMPAR');
+          }
+        }
+      }
+
+      Pares(32,320);
+
+      //EXERCICIO 3
+
+      function temHabilidade(skills) {
+        if (skills.indexOf('Javascript') > -1){
+          console.log(true);
+        } else{
+          console.log(false);
+        }
+      }
+      var skills = ['Javascript','NodeJs','ReactJs','ReactNative'];
+      temHabilidade(skills);
+
+      //Exercicio 4
+
+      function experiencia(anos) {
+        if(anosEstudo <= 1){
+          console.log('Iniciante');
+        } else if(anosEstudo <= 3 ){
+          console.log('Intermediário');
+        } else if (anosEstudo <= 6){
+          console.log('Avançado');
+        } else{
+          console.log('Jedi Master');
+        }
+      }
+      var anosEstudo = 7;
+      experiencia(anosEstudo);
+
+      //Exercicio 5
+
+      var usuarios = [
+        {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+        ];
+
+      function possuiHabilidades(skill){
+
+        
+        for (var hab of skill){
+          console.log('O '+hab.nome+' possui as seguintes habilidades: '
+          +hab.habilidades.join(', '));
+        }
+      }
+      possuiHabilidades(usuarios);
+  </script>
+</body>
+</html>
